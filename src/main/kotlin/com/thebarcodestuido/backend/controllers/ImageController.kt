@@ -31,7 +31,6 @@ class ImageController(
 
         val url = storageService.uploadFile(file)
 
-        // Use .apply for clean initialization
         val newImage = ImageEntity().apply { this.url = url }
         val savedImage = imageService.save(newImage)
 
